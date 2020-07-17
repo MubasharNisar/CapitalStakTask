@@ -201,7 +201,7 @@ func handleConnection(conn net.Conn) {
 			log.Println("error closing connection: ", err)
 		}
 	}()
-	if _, err := conn.Write([]byte("Connected..\nUsage:Get <date,region>\n")); err != nil {
+	if _, err := conn.Write([]byte("Connected..\nUsage:{'query':{'date':'11/03/2020'}} or {'query':{'region':'Sindh'}} \n")); err != nil {
 		log.Println("error waiting:", err)
 		return
 	}
